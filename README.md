@@ -67,3 +67,6 @@ There are many other tools to plot information on a map. Here are some more reso
 - https://jakevdp.github.io/PythonDataScienceHandbook/04.13-geographic-data-with-basemap.html
 - https://www.geeksforgeeks.org/python-plotting-data-on-google-map-using-pygmaps-package/
 - https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-spatial-data/customize-vector-plots/python-customize-map-legends-geopandas/
+
+## End of class
+In Repl.it, you will find the share link to your code. That is what gets submitted to Canvas.
