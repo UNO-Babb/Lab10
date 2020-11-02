@@ -16,13 +16,18 @@ The Covid-19 data is in a subfolder called *data*.
 ```
 covid = pd.read_csv('data/04-06-2020.csv')
 ```
-Here we are using a pandas feature where it is easy to read all of the data from a **.csv** file. This is much more ellegant than reading it in line-by-line as we did the first time we looked at this data.
+Here we are using a pandas feature where it is easy to read all of the data from a **.csv** file. This is much more elegant than reading it in line-by-line as we did the first time we looked at this data.
 
 Pandas also lets us break out the columns into an array numpy array of values.
 ```
 lat = covid['Lat'].values
 lon = covid['Long_'].values
 confirmed = covid['Confirmed'].values
+```
+That was the data when we ran this project in the spring. Here is the data today:
+
+```
+covid = pd.read_csv('data/10-30-2020.csv')
 ```
 
 ## Step 3 - Plotting the Data
@@ -39,7 +44,7 @@ plt.scatter(lon, lat, s = confirmed, alpha = 0.4)
 ```
 Okay... the number of confirmed cases has overwhelmed the system. We need to scale the information. Numpy allows us to divide by each element of an array with one division operand.
 ```
-area = confirmed / 100
+area = confirmed / 10000
 plt.scatter(lon, lat, s = area, alpha = 0.4)
 ```
 
@@ -48,11 +53,18 @@ For the purposes of this lab, let's assume we are only interested in the cases w
 ```
 covid = pd.read_csv('data/US-COVID-19.csv')
 ```
+
+You'll find that the US is pushed to the corner. We want to change the scale of the graph. Play with the values until you have a suitable graph. You'll replace the **x-low** with a numeric value.
+
+```
+plt.axis([x-low, x-high, y-low, y-high])
+```
+
 ## Step 5 - Overlay an Image
 I found an image of North America with longitude and latitude lines that we can use.
 [Source Map](https://legallandconverter.com/p45.html)
 ```
-img = mpimg.imread('images/NorthAmerica.png')
+img = mpimg.imread('images/NorthAmericaSmall.png')
 imgplot = plt.imshow(img)
 ```
 This code should go before the *plt.show()* command.
@@ -61,6 +73,7 @@ Finally we need to adjust the image size using the extent = [left, right, bottom
 ```
 imgplot = plt.imshow(img, extent=[-190, -30, 14, 85])
 ```
+Again, you may need to adjust the values to best fit your data on top of the map.
 
 ## Further Exploration
 There are many other tools to plot information on a map. Here are some more resources to explore.
