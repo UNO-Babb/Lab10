@@ -24,7 +24,7 @@ lat = covid['Lat'].values
 lon = covid['Long_'].values
 confirmed = covid['Confirmed'].values
 ```
-That was the data when we ran this project in the spring. Here is the data today:
+That was the data when we ran this project in the spring of 2020. Here is the data from last October:
 
 ```
 covid = pd.read_csv('data/10-30-2020.csv')
@@ -74,6 +74,9 @@ Finally we need to adjust the image size using the extent = [left, right, bottom
 imgplot = plt.imshow(img, extent=[-190, -30, 14, 85])
 ```
 Again, you may need to adjust the values to best fit your data on top of the map.
+
+## Step 6 - Using Today's Data
+I updated to the most recent data in the **10-28-2021.csv** file but since many areas are no longer reporting, the data is grouped by state. This mean the data is much less granular and each state is boiled down to one data-point. Fell free to play with that new data but I found it to be less interesting.
 
 ## Further Exploration
 There are many other tools to plot information on a map. Here are some more resources to explore.
