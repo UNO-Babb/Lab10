@@ -76,7 +76,7 @@ imgplot = plt.imshow(img, extent=[-190, -30, 14, 85])
 Again, you may need to adjust the values to best fit your data on top of the map.
 
 ## Step 6 - Using Today's Data
-I updated to the most recent data in the **10-28-2021.csv** file but since many areas are no longer reporting, the data is grouped by state. This mean the data is much less granular and each state is boiled down to one data-point. Fell free to play with that new data but I found it to be less interesting.
+I updated to the most recent data in the **04-09-2022.csv** file but since many areas are no longer reporting, the data is grouped by state. This mean the data is much less granular and each state is boiled down to one data-point. Fell free to play with that new data but I found it to be less interesting.
 
 ## Further Exploration
 There are many other tools to plot information on a map. Here are some more resources to explore.
